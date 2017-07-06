@@ -1,3 +1,13 @@
 #main-toolbar #activity-button {
   background-image: url(../activity/activity-icon.svg);
 }
+#itf_1{
+    height: 845px;
+    width: 1200px;
+    background: url("../img/principal.png") 0 0 no-repeat;
+}
+#btn_inicio{
+    position: relative;
+    left: 485px;
+    top: 633px;
+}
