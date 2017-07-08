@@ -5,22 +5,32 @@ define(function (require) {
         var jquery = require("jquery");
         var Mustache = require("mustache");
         var tpl = require("../js/tpl.js");
-        
-
-	// Manipulate the DOM only when it is ready.
+    
+// Manipulate the DOM only when it is ready.
 	require(['domReady!'], function (doc) {
         var out = "";
 
 		// Initialize the activity.
 		activity.setup();
+        $('.reload-button').on('click', function() {
+            location.reload();
+        });
         
-        $(document).ready(function(){
-	    out = Mustache.render(tpl[0].tpl);
+        function mustache(ind){
+        out = Mustache.render(tpl[ind].tpl);
 	    $('#canvas').html(out);
-	    });
-        
+        }
+
+        $(document).ready(function(){
+            /*mustache(0);*/
+        });
+
         $('#canvas').on('click','#btn_inicio',function(){
-           console.log("key press"); 
+            mustache(1);
+            });
+        
+        $('#canvas').on('click','#btn_jugar',function(){
+           mustache(2); 
         });
 
 	});

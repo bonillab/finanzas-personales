@@ -1,13 +1,71 @@
+h1{
+    width: 50px;
+}
+th{
+    left: 500px;
+}
+.button {
+    position: relative;
+    border-radius: 0;
+    outline: 0;
+}
+
+.button:hover {
+    border: none;
+}
+
 #main-toolbar #activity-button {
   background-image: url(../activity/activity-icon.svg);
 }
-#itf_1{
+
+.inter_size{
     height: 845px;
     width: 1200px;
+}
+/*background de interfaces*/
+#itf_1{
     background: url("../img/principal.png") 0 0 no-repeat;
 }
+#int_2{
+    background: url("../img/background-menu.png") 0 0 no-repeat;
+}
+
+#int_3{
+    background: url("../img/background_game.png") 0 0 no-repeat;
+}
+/*Botones*/
 #btn_inicio{
+    height: 187px;
+    width: 180px;
+    top: 580px;
+    left: 510px;
+    background: url("../img/btn_ini.png") 0 0 no-repeat;
+}
+#btn_historia{
+    height: 297px;
+    width: 392px;
+    top: 450px;
+    left: 80px;
+    background: url("../img/btn_historia.png") 0 0 no-repeat;
+}
+#btn_jugar{
+    height: 299px;
+    width: 275px;
+    top: 415px;
+    left: 340px;
+    background: url("../img/btn_juego.png") 0 0 no-repeat;
+}
+#btn_acep{
+    height: 50px;
+    width: 100px;
+    top: 310px;
+    left: 520px;
+}
+#table{
     position: relative;
-    left: 485px;
-    top: 633px;
+    background: white;
+    opacity: 0.7;
+    width: 730px;
+    top: 149px;
+    left: 270px;
 }
