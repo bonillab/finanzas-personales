@@ -10,6 +10,7 @@
 <link rel="stylesheet" media="screen and (device-width: 1200px) and (device-height: 900px)"
 	href="lib/sugar-web/graphics/css/sugar-200dpi.css">
 <link rel="stylesheet" href="css/activity.css">
+<link rel="stylesheet" type="text/css" href="css/sweetalert.css">
 <script data-main="js/loader" src="lib/require.js"></script>
 </head>
 
@@ -30,74 +31,34 @@
     <div class="inter_size" id="int_3">
         <div id="table">
             <table>
-                <tr>
+                <tr id="tr_indice">
                     <th><h1>Necesidad</h1></th>
+                    <th><h1>Costo</h1></th>
                     <th><h1>Deseo</h1></th>
+                    <th><h1>Costo</h1></th>
                 </tr>
                 <tr>
                     <td><input type="text"></td>
-                    <td><input id="val_1" type="text"></td>
+                    <td><input id="nec1" type="text"></td>
                     <td><input type="text"></td>
-                    <td><input id="val_2" type="text"></td>
+                    <td><input id="des1" type="text"></td>
                 </tr>
                 <tr>
                     <td><input type="text"></td>
+                    <td><input id="nec2" type="text"></td>
                     <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
+                    <td><input id="des2" type="text"></td>
                 </tr>
                 <tr>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
+                    <td><h1>Total</h1></td>
+                    <td><div id="tot_nec"></div></td>
+                    <td><h1>Total</h1></td>
+                    <td><div id="tot_des"></div></td>
                 </tr>
 
             </table>
         </div>
-        <button class="button" id="btn_acep">Aceptar</button>
+        <button id="btn_acep">Aceptar</button>
     </div>
 </div>
 </body>
