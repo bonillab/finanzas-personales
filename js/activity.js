@@ -1,4 +1,3 @@
-
 define(function (require) {
         var activity = require("sugar-web/activity/activity");
         var datastore = require("sugar-web/datastore");
@@ -15,7 +14,7 @@ define(function (require) {
     function suma(valor){
         var list = new Array();
         var suma = 0;
-        for(var i=0;i<2;i++){
+        for(var i=0;i<10;i++){
             var val = nulo(parseFloat($('#'+valor+(i+1)).val()));
             list.push(val);
             suma += list[i];
@@ -26,6 +25,11 @@ define(function (require) {
 // Manipulate the DOM only when it is ready.
 	require(['domReady!'], function (doc) {
         var out = "";
+        
+        function mustache(id,ind){
+        out = Mustache.render(tpl[ind].tpl);
+	    $(id).append(out);
+        }
 
 		// Initialize the activity.
 		activity.setup();
@@ -33,12 +37,19 @@ define(function (require) {
             location.reload();
         });
         
-        function mustache(ind){
-        out = Mustache.render(tpl[ind].tpl);
-	    $('#canvas').html(out);
+        function table(){
+            mustache('#canvas',2);
+            for(var i=0; i<10; i++){
+                output = Mustache.render(tpl[3].tpl,{text : (i+1)});
+                $('#tb1').append(output);
+            }
+            mustache('#tb1',4);
         }
+        
+        
 
         $(document).ready(function(){
+            table();
             /*mustache(0);*/
         });
 
@@ -46,9 +57,11 @@ define(function (require) {
             mustache(1);
             });
         
-        $('#canvas').on('click','#btn_jugar',function(){
-           mustache(2); 
-        });
+        /*$('#canvas').on('click','#btn_jugar'); 
+        
+        });*/
+        
+        
         
         /*Pintar en juego 1*/
         $('#canvas').on('click','#btn_acep',function(){
@@ -64,5 +77,4 @@ define(function (require) {
         });
 
 	});
-
 });
