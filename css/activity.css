@@ -2,12 +2,13 @@
     width: 1200px;
     height: 845px;
 }
-#tr_indice{
+.tr_indice{
     background-color: dodgerblue;
     width: 100px;
 }
 th{
     left: 500px;
+    border-top-width: 10px;
 }
 h1{
     text-align: center;
@@ -22,7 +23,7 @@ input[type=text]{
     border-color: blue;
 }
 .button {
-    position: relative;
+    position: absolute;
     border-radius: 0;
     outline: 0;
 }
@@ -40,14 +41,17 @@ input[type=text]{
     width: 1200px;
 }
 /*background de interfaces*/
-#itf_1{
+#int_1{
     background: url("../img/principal.png") 0 0 no-repeat;
 }
 #int_2{
     background: url("../img/background-menu.png") 0 0 no-repeat;
 }
-
-#int_3{
+/*Interfaces de juego*/
+#int_nyd{
+    background: url("../img/background_game.png") 0 0 no-repeat;
+}
+#int_ahorro{
     background: url("../img/background_game.png") 0 0 no-repeat;
 }
 /*Botones*/
@@ -69,18 +73,18 @@ input[type=text]{
     height: 299px;
     width: 275px;
     top: 415px;
-    left: 340px;
+    left: 740px;
     background: url("../img/btn_juego.png") 0 0 no-repeat;
 }
-#btn_acep{
-    position: relative;
+.btn_acep{
+    position: fixed;
     height: 50px;
     width: 100px;
-    top: 310px;
-    left: 520px;
+    top: 780px;
+    left: 540px;
 }
-#table{
-    position: relative;
+.table{
+    position: absolute;
     border-color: blue;
     border-top-width: 10px;
     background: white;

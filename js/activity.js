@@ -22,13 +22,23 @@ define(function (require) {
         return suma;
     }
     
+    function divicion(){
+        var val1 = nulo(parseFloat($('#inp_val').val()));
+        var val2 = nulo(parseFloat($('#inp_sem').val()));
+        var total = val1 / val2;
+        if(total == Infinity || isNaN(total)) total = "No se puede dividir entre 0";
+        else total = 'Puedes comprar lo que necesitas en: '+total+' semanas'; 
+        console.log(val1,val2);
+        return total;
+    }
+    
 // Manipulate the DOM only when it is ready.
 	require(['domReady!'], function (doc) {
         var out = "";
         
-        function mustache(id,ind){
+        function mustache(ind){
         out = Mustache.render(tpl[ind].tpl);
-	    $(id).append(out);
+	    $('#canvas').html(out);
         }
 
 		// Initialize the activity.
@@ -38,33 +48,31 @@ define(function (require) {
         });
         
         function table(){
-            mustache('#canvas',2);
+            mustache(2);
             for(var i=0; i<10; i++){
                 output = Mustache.render(tpl[3].tpl,{text : (i+1)});
                 $('#tb1').append(output);
             }
-            mustache('#tb1',4);
+            output = Mustache.render(tpl[4].tpl);
+            $('#tb1').append(output);
         }
         
         
 
         $(document).ready(function(){
-            table();
-            /*mustache(0);*/
+           /* mustache(0); */
         });
 
         $('#canvas').on('click','#btn_inicio',function(){
             mustache(1);
             });
         
-        /*$('#canvas').on('click','#btn_jugar'); 
-        
-        });*/
-        
-        
+        $('#canvas').on('click','#btn_jugar',function(){
+            table();    
+        });
         
         /*Pintar en juego 1*/
-        $('#canvas').on('click','#btn_acep',function(){
+        $('#canvas').on('click','#btn_calc_nyd',function(){
             var total_nec = suma('nec');
             var total_des = suma('des');
             if(total_des > total_nec){
@@ -74,6 +82,11 @@ define(function (require) {
                }
             $('#tot_nec').html('<h1>'+total_nec+'</h1>');
             $('#tot_des').html('<h1>'+total_des+'</h1>');
+        });
+        
+        /*Pintar juego 2*/
+        $('#canvas').on('click','#btn_calc_ahorro',function(){
+            $('#tot_ahorro').html(divicion());
         });
 
 	});
