@@ -23,13 +23,23 @@ input[type=text]{
     border-color: blue;
 }
 .button {
-    position: absolute;
+    position: fixed;
     border-radius: 0;
     outline: 0;
 }
-
+.boton{
+    position: fixed;
+    width: 100px;
+    height: 50px;
+}
 .button:hover {
     border: none;
+}
+
+.btn_hc{
+    position: fixed;
+    width: 230px;
+    height: 130px;
 }
 
 #main-toolbar #activity-button {
@@ -41,6 +51,9 @@ input[type=text]{
     width: 1200px;
 }
 /*background de interfaces*/
+#fondo{
+    background-image: url("../img/background.png")
+}
 #int_1{
     background: url("../img/principal.png") 0 0 no-repeat;
 }
@@ -54,11 +67,15 @@ input[type=text]{
 #int_ahorro{
     background: url("../img/background_game.png") 0 0 no-repeat;
 }
+
+#int_hc{
+    background: url("../img/hc-background.png") 0 0 no-repeat;
+}
 /*Botones*/
 #btn_inicio{
     height: 187px;
     width: 180px;
-    top: 580px;
+    top: 640px;
     left: 510px;
     background: url("../img/btn_ini.png") 0 0 no-repeat;
 }
@@ -77,14 +94,39 @@ input[type=text]{
     background: url("../img/btn_juego.png") 0 0 no-repeat;
 }
 .btn_acep{
-    position: fixed;
-    height: 50px;
-    width: 100px;
     top: 780px;
     left: 540px;
 }
+#btn_nd{
+    top: 530px;
+    left: 250px;
+}
+#btn_ahorro{
+    top: 530px;
+    left: 800px; 
+}
+#btn_trueque{
+    top: 275px;
+    left: 180px;
+    background: url("../img/hc/trueque.png") 0 0 no-repeat;
+}
+#btn_trueque:hover{
+    background: url("../img/hc/trueque-hover.png") 0 0 no-repeat;
+}
+#btn_diamante{
+    top: 237px;
+    left: 548px;
+    background: url("../img/hc/diamante.png") 0 0 no-repeat;
+}
+#btn_diamante:hover{
+    background: url("../img/hc/diamante-hover.png") 0 0 no-repeat;
+}
+.btn_atras{
+    top: 780px;
+    left: 100px;
+}
 .table{
-    position: absolute;
+    position: fixed;
     border-color: blue;
     border-top-width: 10px;
     background: white;

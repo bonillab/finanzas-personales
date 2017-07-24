@@ -6,6 +6,8 @@ define(function (require) {
         var Mustache = require("mustache");
         var tpl = require("../js/tpl.js");
     
+        var pos = NaN;
+    
     function nulo(num){
         if(isNaN(num)) return 0;
         else return num;
@@ -25,7 +27,7 @@ define(function (require) {
     function divicion(){
         var val1 = nulo(parseFloat($('#inp_val').val()));
         var val2 = nulo(parseFloat($('#inp_sem').val()));
-        var total = val1 / val2;
+        var total = Math.round(val1 / val2);
         if(total == Infinity || isNaN(total)) total = "No se puede dividir entre 0";
         else total = 'Puedes comprar lo que necesitas en: '+total+' semanas'; 
         console.log(val1,val2);
@@ -36,9 +38,15 @@ define(function (require) {
 	require(['domReady!'], function (doc) {
         var out = "";
         
-        function mustache(ind){
-        out = Mustache.render(tpl[ind].tpl);
-	    $('#canvas').html(out);
+        function mustache(ind,isgame,temp){
+            if(isgame){
+                out = Mustache.render(tpl[ind].activities[temp].tpl);
+	            $('#canvas').html(out);
+            }
+            else{
+                out = Mustache.render(tpl[ind].tpl);
+	            $('#canvas').html(out);
+            }
         }
 
 		// Initialize the activity.
@@ -46,30 +54,43 @@ define(function (require) {
         $('.reload-button').on('click', function() {
             location.reload();
         });
-        
         function table(){
-            mustache(2);
+            mustache(0,true,0);
             for(var i=0; i<10; i++){
-                output = Mustache.render(tpl[3].tpl,{text : (i+1)});
+                output = Mustache.render(tpl[0].activities[1].tpl,{text : (i+1)});
                 $('#tb1').append(output);
             }
-            output = Mustache.render(tpl[4].tpl);
+            output = Mustache.render(tpl[0].activities[2].tpl);
             $('#tb1').append(output);
         }
         
-        
-
         $(document).ready(function(){
-           /* mustache(0); */
+            /*mustache(1);*/
         });
 
         $('#canvas').on('click','#btn_inicio',function(){
-            mustache(1);
+            pos = 0;
+            mustache(2);
             });
         
         $('#canvas').on('click','#btn_jugar',function(){
-            table();    
+            pos = 1;
+            mustache(3);    
         });
+        
+        $('#canvas').on('click','#btn_nd',function(){
+            pos = 2;
+            table();
+        });
+        
+        $('#canvas').on('click','#btn_ahorro',function(){
+            pos = 2;            
+            mustache(0,true,3);
+        })
+        
+        $('#canvas').on('click','.btn_atras',function(){
+            mustache(pos);
+        })
         
         /*Pintar en juego 1*/
         $('#canvas').on('click','#btn_calc_nyd',function(){
