@@ -121,6 +121,14 @@ input[type=text]{
 #btn_diamante:hover{
     background: url("../img/hc/diamante-hover.png") 0 0 no-repeat;
 }
+#btn_banco{
+    top: 230px;
+    left: 970px;
+    background: url("../img/hc/banco.png") 0 0 no-repeat;
+}
+#btn_banco:hover{
+    background: url("../img/hc/banco-hover.png") 0 0 no-repeat;
+}
 .btn_atras{
     top: 780px;
     left: 100px;

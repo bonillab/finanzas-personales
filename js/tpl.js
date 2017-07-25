@@ -1,6 +1,14 @@
 define(function (require) {
     return [
         {
+          'contenido' : [
+              {'hc' : 'El trueque permite a las antiguas civilizaciones empezar a comerciar a través del intercambio de unas mercancías por otras de igual valor.','img' : '../img/hc/trueque.png'},
+              {'hc' : 'Mercancías, objetos o metales preciosos (ladrillos, arcos, placas, navajas, dientes de ballena, oro, cacao, conchas)','img' : '../img/hc/diamante.png'},
+              {'hc' : 'Surge la banca como establecimiento monetario que presta una serie de servicios.','img' : '../img/hc/banco.png'}
+          ]  
+        },
+        {
+            
             'activities' : [
                 {'tpl' : '<div class="inter_size" id="int_nyd"><div class="table"><table id="tb1"><tr class="tr_indice"><th><h1>Necesidad</h1></th><th><h1>Costo</h1></th><th><h1>Deseo</h1></th><th><h1>Costo</h1></th></tr></table></div><button class="btn_acep boton" id="btn_calc_nyd">Aceptar</button><button class="boton btn_atras">Atras</button></div>'},
         
@@ -14,6 +22,7 @@ define(function (require) {
                     
           
         },
+        
         {'tpl' : '<div class="inter_size" id="int_1"><button class="button" id="btn_inicio" type="button"></button></div>'},
         
         {'tpl' : '<div class="inter_size" id="int_2" data="2"><button class="button" id="btn_historia"></button><button class="button" id="btn_jugar"></button></div>'},

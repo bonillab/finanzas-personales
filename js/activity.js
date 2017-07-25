@@ -15,7 +15,7 @@ define(function (require) {
     
     function suma(valor){
         var list = new Array();
-        var suma = 0;
+        var suma = 0;   
         for(var i=0;i<10;i++){
             var val = nulo(parseFloat($('#'+valor+(i+1)).val()));
             list.push(val);
@@ -92,13 +92,24 @@ define(function (require) {
             mustache(pos);
         })
         
+        $('#canvas').on('click','.btn_hc',function(){
+            var btn = $(this).attr('data');
+            var txt = tpl[0].contenido[btn].hc;
+            var img = tpl[0].contenido[btn].img;
+            swal({  title : txt,
+                    imageUrl: img,
+                    imageWidth: 400,
+                    imageHeight: 335
+                    });
+        });
+        
         /*Pintar en juego 1*/
         $('#canvas').on('click','#btn_calc_nyd',function(){
             var total_nec = suma('nec');
             var total_des = suma('des');
             if(total_des > total_nec){
-                swal({  title : "¿Realmente tus deseos son más importantes que tus necesidades?",
-                        type: "warning"            
+                swal({  title : "¿Realmente tus deseos son más importantes que tus necesidades?",         
+                        type: "warning"  
                     });
                }
             $('#tot_nec').html('<h1>'+total_nec+'</h1>');
