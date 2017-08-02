@@ -2,9 +2,14 @@ define(function (require) {
     return [
         {
           'contenido' : [
-              {'hc' : 'El trueque permite a las antiguas civilizaciones empezar a comerciar a través del intercambio de unas mercancías por otras de igual valor.','img' : '../img/hc/trueque.png'},
-              {'hc' : 'Mercancías, objetos o metales preciosos (ladrillos, arcos, placas, navajas, dientes de ballena, oro, cacao, conchas)','img' : '../img/hc/diamante.png'},
-              {'hc' : 'Surge la banca como establecimiento monetario que presta una serie de servicios.','img' : '../img/hc/banco.png'}
+              {'title':'Neolítico 9,000 a.C - 4,000 a.C','hc' : 'El trueque permite a las antiguas civilizaciones empezar a comerciar a través del intercambio de unas mercancías por otras de igual valor.', 'img' : '../img/hc/trueque.png'},
+              {'title': 'Edad Antigua 3,000 a.C finales siglo V d.C', 'hc' : 'Mercancías, objetos o metales preciosos (ladrillos, arcos, placas, navajas, dientes de ballena, oro, cacao, conchas)', 'img' : '../img/hc/diamante.png'},
+              {'title': 'Edad Media Siglo V d.C - XV d.C','hc' : 'Surge la banca como establecimiento monetario que presta una serie de servicios.', 'img' : '../img/hc/banco.png'},
+              {'title': 'La era de los descubrimientos Siglo XV d.C','hc' : 'Búsqueda de nuevas rutas comerciales, lo que propició el flujo de oro, crecimiento de la banca y surgimiento de grandes bancos.', 'img' : '../img/hc/barco.png'},
+              {'title': 'Comercio Transatlántico Siglo XVII','hc': 'Las travesías mejoran con el paso del barco de vela al barco de vapor, mucho más rápido y seguro.', 'img': '../img/hc/trasatlantico.png'},
+              {'title': 'Innovaciones en el transporte Siglo XIX','hc': 'Las innovaciones en el transporte revitalizan notablemente el comercio, ya que con la mejora del transporte de mercancías, éstas pueden ser manufacturadas en cualquier lugar y ser transportadas de forma barata a todos los puntos de consumo.','img': '../img/hc/tren.png'},
+              {'title': 'Globalización Siglo XX - XXI','hc': 'Creación de zonas de libre comercio a nivel internacional.','img': '../img/hc/planeta-hover.png'},
+              {'title': 'Era Tecnológica/ e-commerce Siglo XXI','hc': 'Tendencia a la compra-venta de productos y servicios a través d e medios electrónicos e informáticos.','img': '../img/hc/shop.png'}
           ]  
         },
         {

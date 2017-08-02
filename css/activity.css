@@ -2,6 +2,9 @@
     width: 1200px;
     height: 845px;
 }
+.sweet-alert p{
+    font-size: 30px !important;
+}
 .tr_indice{
     background-color: dodgerblue;
     width: 100px;
@@ -27,6 +30,9 @@ input[type=text]{
     border-radius: 0;
     outline: 0;
 }
+button:hover{
+    border: none;
+}
 .boton{
     position: fixed;
     width: 100px;
@@ -39,7 +45,7 @@ input[type=text]{
 .btn_hc{
     position: fixed;
     width: 230px;
-    height: 130px;
+    height: 190px;
 }
 
 #main-toolbar #activity-button {
@@ -128,6 +134,46 @@ input[type=text]{
 }
 #btn_banco:hover{
     background: url("../img/hc/banco-hover.png") 0 0 no-repeat;
+}
+#btn_barco{
+    top: 325px;
+    left: 730px;
+    background: url("../img/hc/barco.png") 0 0 no-repeat;
+}
+#btn_barco:hover{
+    background: url("../img/hc/barco-hover.png") 0 0 no-repeat;
+}
+#btn_trasatlantico{
+    top: 400px;
+    left: 150px;
+    background: url("../img/hc/trasatlantico.png") 0 0 no-repeat;
+}
+#btn_trasatlantico:hover{
+    background: url("../img/hc/trasatlantico-hover.png") 0 0 no-repeat;
+}
+#btn_tren{
+    top: 440px;
+    left: 450px;
+    background: url("../img/hc/tren.png") 0 0 no-repeat;
+}
+#btn_tren:hover{
+    background: url("../img/hc/tren-hover.png") 0 0 no-repeat;
+}
+#btn_planeta{
+    top: 540px;
+    left: 850px;
+    background: url("../img/hc/planeta.png") 0 0 no-repeat;
+}
+#btn_planeta:hover{
+    background: url("../img/hc/planeta-hover.png") 0 0 no-repeat;
+}
+#btn_shop{
+    top: 645px;
+    left: 200px;
+    background: url("../img/hc/shop.png") 0 0 no-repeat;
+}
+#btn_shop:hover{
+    background: url("../img/hc/shop-hover.png") 0 0 no-repeat;
 }
 .btn_atras{
     top: 780px;

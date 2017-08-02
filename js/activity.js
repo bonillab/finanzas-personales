@@ -55,27 +55,27 @@ define(function (require) {
             location.reload();
         });
         function table(){
-            mustache(0,true,0);
+            mustache(1,true,0);
             for(var i=0; i<10; i++){
-                output = Mustache.render(tpl[0].activities[1].tpl,{text : (i+1)});
+                output = Mustache.render(tpl[1].activities[1].tpl,{text : (i+1)});
                 $('#tb1').append(output);
             }
-            output = Mustache.render(tpl[0].activities[2].tpl);
+            output = Mustache.render(tpl[1].activities[2].tpl);
             $('#tb1').append(output);
         }
         
         $(document).ready(function(){
-            /*mustache(1);*/
+            /*mustache(2);*/
         });
 
         $('#canvas').on('click','#btn_inicio',function(){
             pos = 0;
-            mustache(2);
+            mustache(3);
             });
         
         $('#canvas').on('click','#btn_jugar',function(){
             pos = 1;
-            mustache(3);    
+            mustache(4);    
         });
         
         $('#canvas').on('click','#btn_nd',function(){
@@ -85,7 +85,7 @@ define(function (require) {
         
         $('#canvas').on('click','#btn_ahorro',function(){
             pos = 2;            
-            mustache(0,true,3);
+            mustache(1,true,3);
         })
         
         $('#canvas').on('click','.btn_atras',function(){
@@ -94,9 +94,11 @@ define(function (require) {
         
         $('#canvas').on('click','.btn_hc',function(){
             var btn = $(this).attr('data');
+            var title = tpl[0].contenido[btn].title;
             var txt = tpl[0].contenido[btn].hc;
             var img = tpl[0].contenido[btn].img;
-            swal({  title : txt,
+            swal({  title: title,
+                    text: txt,
                     imageUrl: img,
                     imageWidth: 400,
                     imageHeight: 335
