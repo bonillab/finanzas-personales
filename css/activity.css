@@ -24,6 +24,12 @@ input[type=text]{
     border-radius: 0;
     border-style: solid;
     border-color: blue;
+    font-size: 18pt;
+}
+.select{
+    font-size:30px;
+    border: none;
+    background-color: dodgerblue;
 }
 .button {
     position: fixed;
@@ -67,6 +73,9 @@ button:hover{
     background: url("../img/background-menu.png") 0 0 no-repeat;
 }
 /*Interfaces de juego*/
+#menu_coin{
+    background: url("../img/background.png") 0 0 no-repeat;
+}
 #int_nyd{
     background: url("../img/background_game.png") 0 0 no-repeat;
 }
@@ -100,8 +109,8 @@ button:hover{
     background: url("../img/btn_juego.png") 0 0 no-repeat;
 }
 .btn_acep{
-    top: 780px;
-    left: 540px;
+    top: 840px;
+    left: 570px;
 }
 #btn_nd{
     top: 530px;
@@ -179,6 +188,14 @@ button:hover{
     top: 780px;
     left: 100px;
 }
+#btn_cordoba{
+    left: 200px;
+    top: 450px;
+}
+#btn_dolar{
+    left: 800px;
+    top: 450px;
+}
 .table{
     position: fixed;
     border-color: blue;
@@ -186,6 +203,6 @@ button:hover{
     background: white;
     opacity: 0.7;
     width: 730px;
-    top: 149px;
+    top: 100px;
     left: 270px;
 }

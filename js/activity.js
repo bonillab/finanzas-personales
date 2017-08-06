@@ -5,7 +5,6 @@ define(function (require) {
         var sweetalert = require("sweetalert");
         var Mustache = require("mustache");
         var tpl = require("../js/tpl.js");
-    
         var pos = NaN;
     
     function nulo(num){
@@ -16,12 +15,14 @@ define(function (require) {
     function suma(valor){
         var list = new Array();
         var suma = 0;   
+        var data = $('.inp_nyd').attr('value');
         for(var i=0;i<10;i++){
-            var val = nulo(parseFloat($('#'+valor+(i+1)).val()));
+            var val_str = $('#'+valor+(i+1)).val();
+            var val = nulo(parseFloat(val_str.replace(/[C $]+/g,"")));
             list.push(val);
             suma += list[i];
         }
-        return suma;
+        return {suma : suma, data : data};
     }
     
     function divicion(){
@@ -38,15 +39,11 @@ define(function (require) {
 	require(['domReady!'], function (doc) {
         var out = "";
         
-        function mustache(ind,isgame,temp){
-            if(isgame){
-                out = Mustache.render(tpl[ind].activities[temp].tpl);
-	            $('#canvas').html(out);
-            }
-            else{
-                out = Mustache.render(tpl[ind].tpl);
-	            $('#canvas').html(out);
-            }
+        function mustache(ind,temp){
+            out = Mustache.render(tpl[ind].template[temp].tpl);
+            $('#canvas').html(out);
+            
+        
         }
 
 		// Initialize the activity.
@@ -54,28 +51,31 @@ define(function (require) {
         $('.reload-button').on('click', function() {
             location.reload();
         });
-        function table(){
-            mustache(1,true,0);
+       
+        function table(coin){
+            mustache(2,1);
             for(var i=0; i<10; i++){
-                output = Mustache.render(tpl[1].activities[1].tpl,{text : (i+1)});
+                output = Mustache.render(tpl[2].template[2].tpl,{text : (i+1), coin : coin});
                 $('#tb1').append(output);
             }
-            output = Mustache.render(tpl[1].activities[2].tpl);
-            $('#tb1').append(output);
+            output = Mustache.render(tpl[2].template[3].tpl);
+            $('#tb1').append(output);        
         }
+
         
         $(document).ready(function(){
-            /*mustache(2);*/
+            /*mustache(0,0);*/
+            mustache(2,0);
         });
 
         $('#canvas').on('click','#btn_inicio',function(){
             pos = 0;
-            mustache(3);
+            mustache(0,1);
             });
         
         $('#canvas').on('click','#btn_jugar',function(){
             pos = 1;
-            mustache(4);    
+            mustache(0,2);    
         });
         
         $('#canvas').on('click','#btn_nd',function(){
@@ -83,9 +83,14 @@ define(function (require) {
             table();
         });
         
+        $('#canvas').on('click','.coin',function(){
+            var btn = $(this).attr('data');
+            table(btn);
+        });
+        
         $('#canvas').on('click','#btn_ahorro',function(){
             pos = 2;            
-            mustache(1,true,3);
+            mustache(2,3);
         })
         
         $('#canvas').on('click','.btn_atras',function(){
@@ -94,9 +99,9 @@ define(function (require) {
         
         $('#canvas').on('click','.btn_hc',function(){
             var btn = $(this).attr('data');
-            var title = tpl[0].contenido[btn].title;
-            var txt = tpl[0].contenido[btn].hc;
-            var img = tpl[0].contenido[btn].img;
+            var title = tpl[3].content[btn].title;
+            var txt = tpl[3].content[btn].hc;
+            var img = tpl[3].content[btn].img;
             swal({  title: title,
                     text: txt,
                     imageUrl: img,
@@ -107,15 +112,20 @@ define(function (require) {
         
         /*Pintar en juego 1*/
         $('#canvas').on('click','#btn_calc_nyd',function(){
-            var total_nec = suma('nec');
-            var total_des = suma('des');
-            if(total_des > total_nec){
+            var nec = suma('nec');
+            var des = suma('des');
+            if(nec.suma < des.suma){
                 swal({  title : "¿Realmente tus deseos son más importantes que tus necesidades?",         
                         type: "warning"  
                     });
                }
-            $('#tot_nec').html('<h1>'+total_nec+'</h1>');
-            $('#tot_des').html('<h1>'+total_des+'</h1>');
+            else{
+                swal({  title : "Felicidades, buen trabajo",         
+                        type: "success"  
+                    });
+            }
+            $('#tot_nec').html('<h1>'+nec.data+nec.suma+'</h1>');
+            $('#tot_des').html('<h1>'+des.data+des.suma+'</h1>');
         });
         
         /*Pintar juego 2*/
