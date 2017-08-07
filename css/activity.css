@@ -26,6 +26,11 @@ input[type=text]{
     border-color: blue;
     font-size: 18pt;
 }
+#tru_inp{
+    top: 600px;
+    position: absolute;
+    left: 500px;
+}
 .select{
     font-size:30px;
     border: none;
@@ -71,7 +76,7 @@ button:hover{
     position: absolute;
     height: 300px;
     width: 300px;
-    top: 250px; 
+    top: 350px; 
 }
 
 #int_1{
@@ -93,6 +98,12 @@ button:hover{
 
 #int_hc{
     background: url("../img/hc-background.png") 0 0 no-repeat;
+}
+#tru_cont{
+    position: absolute;
+    width: 900px;
+    left: 150px;
+    top: 80px;
 }
 /*Botones*/
 #btn_inicio{
@@ -209,6 +220,10 @@ button:hover{
     background: url('../img/eu.png');
     left: 750px;
     top: 370px;
+}
+#btn_tru{
+    top: 750px;
+    left: 535px;
 }
 .table{
     position: fixed;

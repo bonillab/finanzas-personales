@@ -35,6 +35,11 @@ define(function (require) {
         return total;
     }
     
+    function random(array) {
+        // La funcion retorna un numero al azar
+        return Math.floor(Math.random() * array.length);
+	}
+    
 // Manipulate the DOM only when it is ready.
 	require(['domReady!'], function (doc) {
         var out = "";
@@ -63,8 +68,12 @@ define(function (require) {
         }
         
         function tru_img(){
-            mustache(1,1);
-            var img = [tpl[3].content[8].img1, tpl[3].content[8].img2];
+            var ran = random(tpl[3].tru_cont);
+            console.log(ran);
+            output = Mustache.render(tpl[1].template[1].tpl, {text : tpl[3].tru_cont[ran].title, content : tpl[3].tru_cont[ran].cont});
+            $('#canvas').html(output);
+            
+            var img = [tpl[3].tru_cont[ran].img1, tpl[3].tru_cont[ran].img2];
             
             for(var i=0; i<2; i++){
                 $('#tru'+(i+1)).css({"background" : "url("+img[i]+") 0 0 no-repeat"});
@@ -74,6 +83,8 @@ define(function (require) {
         
         $(document).ready(function(){
             /*mustache(0,0);*/
+            /*mustache(2,0);*/
+            /*mustache(2,4);*/
             tru_img();
         });
 
@@ -100,11 +111,26 @@ define(function (require) {
         $('#canvas').on('click','#btn_ahorro',function(){
             pos = 2;            
             mustache(2,3);
-        })
+        });
         
         $('#canvas').on('click','.btn_atras',function(){
             mustache(pos);
-        })
+        });
+        
+        $('#canvas').on('click','#btn_tru',function(){
+            var txt = $('#tru_inp').val();
+            console.log(txt);
+            if(txt == ""){
+                swal({  title : "Campos vacios",         
+                        type: "error" 
+                 });
+            }
+            else{
+                swal({  title : "Felicidades, buen trabajo",         
+                        type: "success" 
+                 });
+            }
+        });
         
         $('#canvas').on('click','.btn_hc',function(){
             var btn = $(this).attr('data');
