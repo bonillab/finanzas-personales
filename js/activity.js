@@ -61,11 +61,20 @@ define(function (require) {
             output = Mustache.render(tpl[2].template[3].tpl);
             $('#tb1').append(output);        
         }
+        
+        function tru_img(){
+            mustache(1,1);
+            var img = [tpl[3].content[8].img1, tpl[3].content[8].img2];
+            
+            for(var i=0; i<2; i++){
+                $('#tru'+(i+1)).css({"background" : "url("+img[i]+") 0 0 no-repeat"});
+            }
+        }
 
         
         $(document).ready(function(){
             /*mustache(0,0);*/
-            mustache(2,0);
+            tru_img();
         });
 
         $('#canvas').on('click','#btn_inicio',function(){
@@ -115,6 +124,7 @@ define(function (require) {
             var nec = suma('nec');
             var des = suma('des');
             if(nec.suma < des.suma){
+                document.getElementById('player').play();
                 swal({  title : "¿Realmente tus deseos son más importantes que tus necesidades?",         
                         type: "warning"  
                     });
