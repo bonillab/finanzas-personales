@@ -5,7 +5,7 @@ define(function (require) {
         var sweetalert = require("sweetalert");
         var Mustache = require("mustache");
         var tpl = require("../js/tpl.js");
-        var pos = NaN;
+        var pos = 0;
     
     function nulo(num){
         if(isNaN(num)) return 0;
@@ -47,8 +47,6 @@ define(function (require) {
         function mustache(ind,temp){
             out = Mustache.render(tpl[ind].template[temp].tpl);
             $('#canvas').html(out);
-            
-        
         }
 
 		// Initialize the activity.
@@ -56,6 +54,20 @@ define(function (require) {
         $('.reload-button').on('click', function() {
             location.reload();
         });
+        
+        function historia(){
+            if(pos==4){
+                tru_img();
+            }
+            else if(pos == 6){
+                mustache(1,1);
+            }
+            else{
+                output = Mustache.render(tpl[1].template[0].tpl, {bg : tpl[1].img[pos]});
+                $('#canvas').html(output);
+            }
+            
+        }
        
         function table(coin){
             mustache(2,1);
@@ -69,7 +81,7 @@ define(function (require) {
         
         function tru_img(){
             var ran = random(tpl[3].tru_cont);
-            output = Mustache.render(tpl[1].template[1].tpl, {text : tpl[3].tru_cont[ran].title, content : tpl[3].tru_cont[ran].cont});
+            output = Mustache.render(tpl[1].template[2].tpl, {text : tpl[3].tru_cont[ran].title, content : tpl[3].tru_cont[ran].cont});
             $('#canvas').html(output);
             
             var img = [tpl[3].tru_cont[ran].img1, tpl[3].tru_cont[ran].img2];
@@ -81,19 +93,18 @@ define(function (require) {
 
         
         $(document).ready(function(){
-            mustache(0,0);
+            /*mustache(0,0);*/
             /*mustache(2,0);*/
             /*mustache(2,4);*/
             /*tru_img();*/
+            historia();
         });
 
         $('#canvas').on('click','#btn_inicio',function(){
-            pos = 0;
             mustache(0,1);
             });
         
         $('#canvas').on('click','#btn_jugar',function(){
-            pos = 1;
             mustache(0,2);    
         });
         
@@ -112,6 +123,16 @@ define(function (require) {
         
         $('#canvas').on('click','.btn_atras',function(){
             mustache(pos);
+        });
+        
+        $('#canvas').on('click','.btn_sig_h',function(){
+            pos += 1;
+            historia();
+            });
+        
+        $('#canvas').on('click','.btn_atras_h',function(){
+            pos-= 1;
+            historia();
         });
         
         $('#canvas').on('click','#btn_tru',function(){

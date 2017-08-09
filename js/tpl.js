@@ -14,11 +14,19 @@ define(function (require) {
         {
             /*Historia*/
             'template': [
-                {'tpl': '<div class="inter_size" id="int_hc"><button class="btn_hc" id="btn_trueque" data="0"></button><button class="btn_hc" id="btn_diamante" data="1"></button><button class="btn_hc" id="btn_banco" data="2"></button><button class="btn_hc" id="btn_barco" data="3"></button><button class="btn_hc" id="bt n_trasatlantico" data="4"></button><button class="btn_hc" id="btn_tren" data="5"></button><button class="btn_hc" id="btn_planeta" data="5"></button><button class="btn_hc" id="btn_shop" data="6"></button></div>'},
+                {'tpl' : '<div class="inter_size" data="{{data}}"id="int_his" style="background : url({{bg}})"><button class="boton btn_atras_h">Atras</button><button class="boton btn_sig_h">Siguiente</button></div>'},
                 
-                {'tpl': '<div class="inter_size" id="fondo"><div id="tru_cont"><h1 style="font-size : 50px">{{text}}</h1><h1>{{content}}</h1></div><div class="tru" id="tru1" style="left : 150px"></div><div class="tru" style="left : 500px"><picture><img src="../img/cambio.png"></picture></div><div><input type="text" id="tru_inp"><div><button class="boton" id="btn_tru">Aceptar</button><div class="tru" id="tru2" style="left : 750px"></div></div>'}
+                {'tpl': '<div class="inter_size" id="int_hc"><button class="btn_hc" id="btn_trueque" data="0"></button><button class="btn_hc" id="btn_diamante" data="1"></button><button class="btn_hc" id="btn_banco" data="2"></button><button class="btn_hc" id="btn_barco" data="3"></button><button class="btn_hc" id="btn_trasatlantico" data="4"></button><button class="btn_hc" id="btn_tren" data="5"></button><button class="btn_hc" id="btn_planeta" data="5"></button><button class="btn_hc" id="btn_shop" data="6"></button><button class="boton btn_atras_h">Atras</button><button class="boton btn_sig_h">Siguiente</button></div>'},
+                
+                {'tpl': '<div class="inter_size" id="fondo"><div id="tru_cont"><h1 style="font-size : 50px">{{text}}</h1><h1>{{content}}</h1></div><div class="tru" id="tru1" style="left : 150px"></div><div class="tru" style="left : 500px"><picture><img src="../img/cambio.png"></picture></div><div><input type="text" id="tru_inp"><div><button class="boton" id="btn_tru">Aceptar</button><div class="tru" id="tru2" style="left : 750px"></div><button class="boton btn_atras_h">Atras</button><button class="boton btn_sig_h">Siguiente</button></div>'}
+            ],
+            
+            'img' : [
+                "../img/historia/El_dinero.png", "../img/historia/intercambio.png", "../img/historia/historia_del_dinero.png", "../img/historia/el_trueque.png", "", "../img/historia/primeros_medios_de_intercambio.png",""
             ]
+            
         },
+        
         {
             /*Actividades*/
             'template' : [

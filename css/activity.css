@@ -78,7 +78,6 @@ button:hover{
     width: 300px;
     top: 350px; 
 }
-
 #int_1{
     background: url("../img/principal.png") 0 0 no-repeat;
 }
@@ -215,6 +214,18 @@ button:hover{
 .btn_atras{
     top: 780px;
     left: 100px;
+}
+.btn_sig{
+    top: 780px;
+    left: 950px;
+}
+.btn_atras_h{
+    top: 780px;
+    left: 100px;
+}
+.btn_sig_h{
+    top: 780px;
+    left: 950px;
 }
 #btn_cordoba{
     width: 330px;
