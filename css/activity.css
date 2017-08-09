@@ -107,25 +107,34 @@ button:hover{
 }
 /*Botones*/
 #btn_inicio{
-    height: 187px;
-    width: 180px;
-    top: 640px;
-    left: 510px;
+    height: 230px;
+    width: 220px;
+    top: 610px;
+    left: 500px;
     background: url("../img/btn_ini.png") 0 0 no-repeat;
 }
+#btn_inicio:hover{
+    background: url("../img/btn_ini_hover.png") 0 0 no-repeat;
+}
 #btn_historia{
-    height: 297px;
-    width: 392px;
+    height: 280px;
+    width: 450px;
     top: 450px;
     left: 80px;
     background: url("../img/btn_historia.png") 0 0 no-repeat;
 }
+#btn_historia:hover{
+    background: url("../img/btn_historia_hover.png") 0 0 no-repeat;
+}
 #btn_jugar{
-    height: 299px;
-    width: 275px;
+    height: 350px;
+    width: 310px;
     top: 415px;
     left: 740px;
     background: url("../img/btn_juego.png") 0 0 no-repeat;
+}
+#btn_jugar:hover{
+    background: url("../img/btn_juego_hover.png") 0 0 no-repeat;
 }
 .btn_acep{
     top: 840px;

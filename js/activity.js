@@ -29,7 +29,7 @@ define(function (require) {
         var val1 = nulo(parseFloat($('#inp_val').val()));
         var val2 = nulo(parseFloat($('#inp_sem').val()));
         var total = Math.round(val1 / val2);
-        if(total == Infinity || isNaN(total)) total = "No se puede dividir entre 0";
+        if(total == Infinity || isNaN(total)) total = "Datos no validos";
         else total = 'Puedes comprar lo que necesitas en: '+total+' semanas'; 
         console.log(val1,val2);
         return total;
@@ -69,7 +69,6 @@ define(function (require) {
         
         function tru_img(){
             var ran = random(tpl[3].tru_cont);
-            console.log(ran);
             output = Mustache.render(tpl[1].template[1].tpl, {text : tpl[3].tru_cont[ran].title, content : tpl[3].tru_cont[ran].cont});
             $('#canvas').html(output);
             
@@ -82,10 +81,10 @@ define(function (require) {
 
         
         $(document).ready(function(){
-            /*mustache(0,0);*/
+            mustache(0,0);
             /*mustache(2,0);*/
             /*mustache(2,4);*/
-            tru_img();
+            /*tru_img();*/
         });
 
         $('#canvas').on('click','#btn_inicio',function(){
@@ -99,8 +98,7 @@ define(function (require) {
         });
         
         $('#canvas').on('click','#btn_nd',function(){
-            pos = 2;
-            table();
+            mustache(2,0);
         });
         
         $('#canvas').on('click','.coin',function(){
@@ -109,8 +107,7 @@ define(function (require) {
         });
         
         $('#canvas').on('click','#btn_ahorro',function(){
-            pos = 2;            
-            mustache(2,3);
+            mustache(2,4);
         });
         
         $('#canvas').on('click','.btn_atras',function(){

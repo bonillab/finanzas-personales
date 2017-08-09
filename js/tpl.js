@@ -16,7 +16,7 @@ define(function (require) {
             'template': [
                 {'tpl': '<div class="inter_size" id="int_hc"><button class="btn_hc" id="btn_trueque" data="0"></button><button class="btn_hc" id="btn_diamante" data="1"></button><button class="btn_hc" id="btn_banco" data="2"></button><button class="btn_hc" id="btn_barco" data="3"></button><button class="btn_hc" id="bt n_trasatlantico" data="4"></button><button class="btn_hc" id="btn_tren" data="5"></button><button class="btn_hc" id="btn_planeta" data="5"></button><button class="btn_hc" id="btn_shop" data="6"></button></div>'},
                 
-                {'tpl': '<div class="inter_size" id="fondo"><div id="tru_cont"><h1>{{text}}</h1><h1>{{content}}</h1></div><div class="tru" id="tru1" style="left : 150px"></div><div class="tru" style="left : 500px"><picture><img src="../img/cambio.png"></picture></div><div><input type="text" id="tru_inp"><div><button class="boton" id="btn_tru">Aceptar</button><div class="tru" id="tru2" style="left : 750px"></div></div>'}
+                {'tpl': '<div class="inter_size" id="fondo"><div id="tru_cont"><h1 style="font-size : 50px">{{text}}</h1><h1>{{content}}</h1></div><div class="tru" id="tru1" style="left : 150px"></div><div class="tru" style="left : 500px"><picture><img src="../img/cambio.png"></picture></div><div><input type="text" id="tru_inp"><div><button class="boton" id="btn_tru">Aceptar</button><div class="tru" id="tru2" style="left : 750px"></div></div>'}
             ]
         },
         {
@@ -57,7 +57,9 @@ define(function (require) {
                 
                 {'title' : '¿Cuántos zapatos vale una chaqueta?', 'cont' : 'Muy buena suposición. ¿Pero qué si los zapatos son el tamaño incorrecto, o dañado? Esto podría cambiar cuántos zapatos de la chaqueta vale la pena.', 'img1' : '../img/zapato.png', 'img2' : '../img/chaqueta.png'},
                 
-                {'title' : '¿Cuántos plátanos vale un melón?', 'cont' : '¡Buen intento! ¿Y si te dijera que los plátanos no están maduros y son pequeños, esto cambiaría cuántos plátanos vale el melón?', 'img1' : '../img/banano.png', 'img2' : '../img/melon.png'}
+                {'title' : '¿Cuántos plátanos vale un melón?', 'cont' : '¡Buen intento! ¿Y si te dijera que los plátanos no están maduros y son pequeños, esto cambiaría cuántos plátanos vale el melón?', 'img1' : '../img/banano.png', 'img2' : '../img/melon.png'},
+                
+                {'title' : '¿Cuántas sillas vale una cama?', 'cont' : '¡Muy Bien! Pero, más sillas podrían ser necesaria para un comedor grande, o si las sillas no están en buenas condiciones.', 'img1' : '../img/silla.png', 'img2' : '../img/cama.png'}
                 
             ]
             
