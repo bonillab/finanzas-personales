@@ -93,16 +93,21 @@ define(function (require) {
 
         
         $(document).ready(function(){
-            /*mustache(0,0);*/
+            mustache(0,0);
             /*mustache(2,0);*/
             /*mustache(2,4);*/
             /*tru_img();*/
-            historia();
+            /*historia();*/
         });
 
         $('#canvas').on('click','#btn_inicio',function(){
             mustache(0,1);
             });
+        
+        $('#canvas').on('click','#btn_historia',function(){
+            historia();    
+        });
+        
         
         $('#canvas').on('click','#btn_jugar',function(){
             mustache(0,2);    

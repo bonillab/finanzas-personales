@@ -2,6 +2,8 @@
     width: 1200px;
     height: 845px;
 }
+
+
 .sweet-alert p{
     font-size: 30px !important;
 }
@@ -26,7 +28,21 @@ input[type=text]{
     border-color: blue;
     font-size: 18pt;
 }
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    
+}
+
 #tru_inp{
+    width: 160px;
+    border-style: solid;
+    border-color: blue;
+    font-size: 18pt;
+    height: 30px;
     top: 600px;
     position: absolute;
     left: 500px;
@@ -220,10 +236,16 @@ button:hover{
     left: 950px;
 }
 .btn_atras_h{
+    background: url("../img/btn_atras.png") 0 0 no-repeat;
+    width: 185px;
+    height: 90px;
     top: 780px;
     left: 100px;
 }
 .btn_sig_h{
+    background: url("../img/btn_sig.png") 0 0 no-repeat;
+    width: 185px;
+    height: 90px;
     top: 780px;
     left: 950px;
 }
