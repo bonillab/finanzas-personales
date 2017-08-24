@@ -18,11 +18,13 @@ define(function (require) {
                 
                 {'tpl': '<div class="inter_size" id="int_hc"><button class="btn_hc" id="btn_trueque" data="0"></button><button class="btn_hc" id="btn_diamante" data="1"></button><button class="btn_hc" id="btn_banco" data="2"></button><button class="btn_hc" id="btn_barco" data="3"></button><button class="btn_hc" id="btn_trasatlantico" data="4"></button><button class="btn_hc" id="btn_tren" data="5"></button><button class="btn_hc" id="btn_planeta" data="5"></button><button class="btn_hc" id="btn_shop" data="6"></button><button class="boton btn_atras_h"></button><button class="boton btn_sig_h"></button></div>'},
                 
-                {'tpl': '<div class="inter_size" id="fondo"><div id="tru_cont"><h1 style="font-size : 50px">{{text}}</h1><h1>{{content}}</h1></div><div class="tru" id="tru1" style="left : 150px"></div><div class="tru" style="left : 500px"><picture><img src="../img/cambio.png"></picture></div><div><input type="number" id="tru_inp"><div><button class="boton" id="btn_tru">Aceptar</button><div class="tru" id="tru2" style="left : 750px"></div><button class="boton btn_atras_h"></button><button class="boton btn_sig_h"></button></div>'}
+                {'tpl': '<div class="inter_size" id="fondo"><div id="tru_cont"><h1 style="font-size : 50px">{{text}}</h1></div><div class="tru" id="tru1" style="left : 150px"></div><div class="tru" style="left : 500px"><picture><img src="../img/cambio.png"></picture></div><div><input type="number" id="tru_inp"><div><button class="boton" id="btn_tru">Aceptar</button><div class="tru" id="tru2" style="left : 750px"></div><button class="boton btn_atras_h"></button><button class="boton btn_sig_h"></button></div>'},
+                
+                {'tpl' : '<div class="inter_size" id="int_debcred"><h2 id="cyd_cont">{{text}}</h2><button class="boton" id="btn_cred">Crédito</button><button class="boton" id="btn_deb">Débito</button><button class="boton btn_atras_h"></button><button class="boton btn_sig_h"></button></div>', 'title' : "Tarjetas de Débito y Crédito", 'deb' : "Tarjeta de débito: vinculada directamente a la cuenta (ahorro o comprobación). Cuando se utilizael dinero se toma directamente de la cuenta.", 'cred' : "Tarjeta de crédito: es un medio de pago que le permite hacer compras que puede pagar posteriormente (una semana después, un mes después, un año después, etc). Son llamadas “de crédito” porque cuando paga cualquier mercancía con ella, el banco que se la otorgó te está concediendo un préstamo que debe pagar de acuerdo al período que elija según los plazos negociados con la entidad."}
             ],
             
             'img' : [
-                "../img/historia/El_dinero.png", "../img/historia/intercambio.png", "../img/historia/historia_del_dinero.png", "../img/historia/el_trueque.png", "", "../img/historia/primeros_medios_de_intercambio.png",""
+                "../img/historia/El_dinero.png", "../img/historia/intercambio.png", "../img/historia/origen.png", "../img/historia/historia_del_dinero.png", "../img/historia/el_trueque.png", "", "../img/historia/primeros_medios_de_intercambio.png","","../img/historia/el_dinero_de_hoy.png","../img/historia/funciones.png","../img/historia/Monedas_del_mundo.png", "../img/historia/nyd.png", "../img/historia/gastar_ahorrar.png", "../img/historia/sistema_sancario.png","","../img/historia/bancos_economia.png"
             ]
             
         },
@@ -32,13 +34,13 @@ define(function (require) {
             'template' : [
                 {'tpl': '<div class="inter_size" id="menu_coin"><h1 style="position : absolute; top : 250px; left: 260px;">Córdoba</h1><button class="boton coin" id="btn_cordoba" data="C$ "></button><h1 style="position : absolute; top : 250px; left: 870px;">Dolar</h1><button class="boton coin" id="btn_dolar" data="$ "></button></div>'},
                 
-                {'tpl' : '<div class="inter_size" id="int_nyd"><div class="table"><h1 class="tuto">Con ayuda de tus padres utiliza recibos de compra y clasificalos en la columna segun corresponda. Al final agrega los precios para obtener un total de gastos.</h1><table id="tb1"><tr class="tr_indice"><th><h1>Necesidad</h1></th><th><h1>Costo</h1></th><th><h1>Deseo</h1></th><th><h1>Costo</h1></th></tr></table></div><button class="btn_acep boton" id="btn_calc_nyd">Aceptar</button><button class="boton btn_atras"></button><audio id="player" src="../sound/error.mp3"></audio></div>'},
+                {'tpl' : '<div class="inter_size" id="int_nyd"><div class="table"><h1 class="tuto">Con ayuda de tus padres utiliza recibos de compra y clasificalos en la columna segun corresponda. Al final agrega los precios para obtener un total de gastos.</h1><table id="tb1"><tr class="tr_indice"><th><h1>Necesidad</h1></th><th><h1>Costo</h1></th><th><h1>Deseo</h1></th><th><h1>Costo</h1></th></tr></table></div><button class="btn_acep boton" id="btn_calc_nyd">Aceptar</button><button class="boton btn_atras"></button><audio id="player" src="../sound/error.ogg"></audio></div>'},
         
-                {'tpl' : '<tr><td><input type="text"></td><td><input class="inp_nyd" value="{{coin}}" id="nec{{text}}" type="text"></td><td><input type="text"></td><td><input value="{{coin}}" id="des{{text}}" type="text"></td></tr>'},
+                {'tpl' : '<tr><td><input type="text"></td><td><input class="inp_nyd" placeholder="{{coin}}" id="nec{{text}}" type="number"></td><td><input type="text"></td><td><input class="inp_nyd" placeholder="{{coin}}" id="des{{text}}" type="number"></td></tr>'},
         
                 {'tpl' : '<tr><td><h1>Total</h1></td><td><div id="tot_nec"></div></td><td><h1>Total</h1></td><td><div id="tot_des"></div></td></tr>'},
         
-                {'tpl' : '<div class="inter_size" id="int_ahorro"><div class="table"><h1>¡Ahora aprenderemos a AHORRAR! En la tabla ubica el costo de lo que deseas comprar y sabrás cuanto debes ahorrar para obtenerlo.</h1><h1>Agenda de Ahorro</h1><table id="bl2"><tr><th><h1>Que quieres comprar</h1></th><th><input type="text" id="inp_obj"></th></tr><tr><th><h1>Cuanto Cuesta</h1></th><th><input type="text" id="inp_val"></th></tr><tr><th><h1>Cuanto puedes ahorrar cada semana</h1></th><th><input type="text" id="inp_sem"></th></tr></table><h1 id="tot_ahorro"></h1><button class="btn_acep boton" id="btn_calc_ahorro">Calcular</button><button class="boton btn_atras"></button></div></div>'}
+                {'tpl' : '<div class="inter_size" id="int_ahorro"><div class="table"><h1>¡Ahora aprenderemos a AHORRAR! En la tabla ubica el costo de lo que deseas comprar y sabrás cuanto debes ahorrar para obtenerlo.</h1><h1>Agenda de Ahorro</h1><table id="bl2"><tr><th><h1>Que quieres comprar</h1></th><th><input type="text" id="inp_obj"></th></tr><tr><th><h1>Cuanto Cuesta</h1></th><th><input type="text" id="inp_val"></th></tr><tr><th><h1>Cuanto puedes ahorrar cada semana</h1></th><th><input type="text" id="inp_sem"></th></tr></table><h1 id="tot_ahorro"></h1></div><button class="btn_acep boton" id="btn_calc_ahorro">Calcular</button><button class="boton btn_atras"></button></div>'}
               
           ]
         },
@@ -67,7 +69,7 @@ define(function (require) {
                 
                 {'title' : '¿Cuántos plátanos vale un melón?', 'cont' : '¡Buen intento! ¿Y si te dijera que los plátanos no están maduros y son pequeños, esto cambiaría cuántos plátanos vale el melón?', 'img1' : '../img/banano.png', 'img2' : '../img/melon.png'},
                 
-                {'title' : '¿Cuántas sillas vale una cama?', 'cont' : '¡Muy Bien! Pero, más sillas podrían ser necesaria para un comedor grande, o si las sillas no están en buenas condiciones.', 'img1' : '../img/silla.png', 'img2' : '../img/cama.png'}
+                {'title' : '¿Cuántas sillas vale una cama?', 'cont' : '¡Muy Bien! Pero, más sillas podrían ser necesaria para un comedor grande, o si las sillas no están en buenas condiciones.', 'img1' : '../img/silla.png', 'img2' : '../img/cama.png'},
                 
             ]
             

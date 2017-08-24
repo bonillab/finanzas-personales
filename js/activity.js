@@ -8,14 +8,14 @@ define(function (require) {
         var pos = 0;
     
     function nulo(num){
-        if(isNaN(num)) return 0;
+        if(isNaN(num) || num === undefined) return 0;
         else return num;
     }
     
     function suma(valor){
         var list = new Array();
         var suma = 0;   
-        var data = $('.inp_nyd').attr('value');
+        var data = $('.inp_nyd').attr('placeholder');
         for(var i=0;i<10;i++){
             var val_str = $('#'+valor+(i+1)).val();
             var val = nulo(parseFloat(val_str.replace(/[C $]+/g,"")));
@@ -43,7 +43,8 @@ define(function (require) {
 // Manipulate the DOM only when it is ready.
 	require(['domReady!'], function (doc) {
         var out = "";
-        
+        var ran = NaN;
+       
         function mustache(ind,temp){
             out = Mustache.render(tpl[ind].template[temp].tpl);
             $('#canvas').html(out);
@@ -56,16 +57,23 @@ define(function (require) {
         });
         
         function historia(){
-            if(pos==4){
-                tru_img();
-            }
-            else if(pos == 6){
-                mustache(1,1);
+            if(pos==5) tru_img();
+            
+            else if(pos == 7) mustache(1,1);
+            else if(pos == 14) cred_deb()
+            else if(pos<0){
+                mustache(0,1);
+                pos = 0;
+                console.log("prncipal");
             }
             else{
                 output = Mustache.render(tpl[1].template[0].tpl, {bg : tpl[1].img[pos]});
                 $('#canvas').html(output);
             }
+            
+        }
+        
+        function atras_juego(){
             
         }
        
@@ -80,8 +88,8 @@ define(function (require) {
         }
         
         function tru_img(){
-            var ran = random(tpl[3].tru_cont);
-            output = Mustache.render(tpl[1].template[2].tpl, {text : tpl[3].tru_cont[ran].title, content : tpl[3].tru_cont[ran].cont});
+            ran = random(tpl[3].tru_cont);
+            output = Mustache.render(tpl[1].template[2].tpl, {text : tpl[3].tru_cont[ran].title});
             $('#canvas').html(output);
             
             var img = [tpl[3].tru_cont[ran].img1, tpl[3].tru_cont[ran].img2];
@@ -89,6 +97,10 @@ define(function (require) {
             for(var i=0; i<2; i++){
                 $('#tru'+(i+1)).css({"background" : "url("+img[i]+") 0 0 no-repeat"});
             }
+        }
+        function cred_deb(){
+            output = Mustache.render(tpl[1].template[3].tpl, {text : tpl[1].template[3].title});
+            $('#canvas').html(output);
         }
 
         
@@ -140,16 +152,26 @@ define(function (require) {
             historia();
         });
         
+        $('#canvas').on('click','#btn_cred', function(){
+            output = Mustache.render(tpl[1].template[3].tpl, {text : tpl[1].template[3].cred});
+            $('#canvas').html(output);
+        });
+        
+        $('#canvas').on('click','#btn_deb', function(){
+            output = Mustache.render(tpl[1].template[3].tpl, {text : tpl[1].template[3].deb});
+            $('#canvas').html(output);
+        });
+        
         $('#canvas').on('click','#btn_tru',function(){
             var txt = $('#tru_inp').val();
-            console.log(txt);
+            var img = tpl[3].tru_cont[ran].cont
             if(txt == ""){
                 swal({  title : "Campos vacios",         
                         type: "error" 
                  });
             }
             else{
-                swal({  title : "Felicidades, buen trabajo",         
+                swal({  title : img,         
                         type: "success" 
                  });
             }
@@ -172,12 +194,18 @@ define(function (require) {
         $('#canvas').on('click','#btn_calc_nyd',function(){
             var nec = suma('nec');
             var des = suma('des');
+            console.log(nec+"  "+des);
             if(nec.suma < des.suma){
                 document.getElementById('player').play();
                 swal({  title : "¿Realmente tus deseos son más importantes que tus necesidades?",         
                         type: "warning"  
                     });
                }
+            else if(nec === undefined || des === undefined){
+                swal({  title : "Datos no validos",         
+                        type: "success"  
+                    });
+            }
             else{
                 swal({  title : "Felicidades, buen trabajo",         
                         type: "success"  

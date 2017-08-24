@@ -3,7 +3,6 @@
     height: 845px;
 }
 
-
 .sweet-alert p{
     font-size: 30px !important;
 }
@@ -34,9 +33,15 @@ input[type=number]::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
-    
 }
 
+.inp_nyd{
+    width: 160px;
+    border-style: solid;
+    border-color: blue;
+    font-size: 18pt;
+    height: 30px;
+}
 #tru_inp{
     width: 160px;
     border-style: solid;
@@ -53,7 +58,7 @@ input[type=number]::-webkit-inner-spin-button {
     background-color: dodgerblue;
 }
 .button {
-    position: fixed;
+    position: absolute;
     border-radius: 0;
     outline: 0;
 }
@@ -61,7 +66,7 @@ button:hover{
     border: none;
 }
 .boton{
-    position: fixed;
+    position: absolute;
     width: 100px;
     height: 50px;
 }
@@ -70,7 +75,7 @@ button:hover{
 }
 
 .btn_hc{
-    position: fixed;
+    position: absolute;
     width: 230px;
     height: 190px;
 }
@@ -114,17 +119,29 @@ button:hover{
 #int_hc{
     background: url("../img/hc-background.png") 0 0 no-repeat;
 }
+#int_debcred{
+    background: url("../img/historia/cred_deb.png") 0 0 no-repeat;
+}
 #tru_cont{
     position: absolute;
     width: 900px;
     left: 150px;
     top: 80px;
 }
+#cyd_cont{
+    position: absolute;
+    width: 456px;
+    height: 280px;
+    top: 130px;
+    left: 172px;
+    text-align: center;
+    color: white;
+}
 /*Botones*/
 #btn_inicio{
     height: 230px;
     width: 220px;
-    top: 610px;
+    top: 560px;
     left: 500px;
     background: url("../img/btn_ini.png") 0 0 no-repeat;
 }
@@ -152,7 +169,7 @@ button:hover{
     background: url("../img/btn_juego_hover.png") 0 0 no-repeat;
 }
 .btn_acep{
-    top: 840px;
+    top: 720px;
     left: 570px;
 }
 #btn_nd{
@@ -164,7 +181,7 @@ button:hover{
     left: 800px; 
 }
 #btn_trueque{
-    top: 275px;
+    top: 230px;
     left: 180px;
     background: url("../img/hc/trueque.png") 0 0 no-repeat;
 }
@@ -172,7 +189,7 @@ button:hover{
     background: url("../img/hc/trueque-hover.png") 0 0 no-repeat;
 }
 #btn_diamante{
-    top: 237px;
+    top: 185px;
     left: 548px;
     background: url("../img/hc/diamante.png") 0 0 no-repeat;
 }
@@ -180,7 +197,7 @@ button:hover{
     background: url("../img/hc/diamante-hover.png") 0 0 no-repeat;
 }
 #btn_banco{
-    top: 230px;
+    top: 190px;
     left: 970px;
     background: url("../img/hc/banco.png") 0 0 no-repeat;
 }
@@ -188,7 +205,7 @@ button:hover{
     background: url("../img/hc/banco-hover.png") 0 0 no-repeat;
 }
 #btn_barco{
-    top: 325px;
+    top: 270px;
     left: 730px;
     background: url("../img/hc/barco.png") 0 0 no-repeat;
 }
@@ -196,7 +213,7 @@ button:hover{
     background: url("../img/hc/barco-hover.png") 0 0 no-repeat;
 }
 #btn_trasatlantico{
-    top: 400px;
+    top: 350px;
     left: 150px;
     background: url("../img/hc/trasatlantico.png") 0 0 no-repeat;
 }
@@ -204,7 +221,7 @@ button:hover{
     background: url("../img/hc/trasatlantico-hover.png") 0 0 no-repeat;
 }
 #btn_tren{
-    top: 440px;
+    top: 410px;
     left: 450px;
     background: url("../img/hc/tren.png") 0 0 no-repeat;
 }
@@ -212,7 +229,7 @@ button:hover{
     background: url("../img/hc/tren-hover.png") 0 0 no-repeat;
 }
 #btn_planeta{
-    top: 540px;
+    top: 530px;
     left: 850px;
     background: url("../img/hc/planeta.png") 0 0 no-repeat;
 }
@@ -220,7 +237,7 @@ button:hover{
     background: url("../img/hc/planeta-hover.png") 0 0 no-repeat;
 }
 #btn_shop{
-    top: 645px;
+    top: 570px;
     left: 200px;
     background: url("../img/hc/shop.png") 0 0 no-repeat;
 }
@@ -228,26 +245,30 @@ button:hover{
     background: url("../img/hc/shop-hover.png") 0 0 no-repeat;
 }
 .btn_atras{
-    top: 780px;
+    background: url("../img/btn_atras.png") 0 0 no-repeat;
+    width: 185px;
+    height: 90px;
+    top: 700px;
     left: 100px;
 }
 .btn_sig{
     top: 780px;
     left: 950px;
 }
-.btn_atras_h{
-    background: url("../img/btn_atras.png") 0 0 no-repeat;
-    width: 185px;
-    height: 90px;
-    top: 780px;
-    left: 100px;
-}
+
 .btn_sig_h{
     background: url("../img/btn_sig.png") 0 0 no-repeat;
     width: 185px;
     height: 90px;
-    top: 780px;
-    left: 950px;
+    top: 700px;
+    left: 915px;
+}
+.btn_atras_h{
+    background: url("../img/btn_atras.png") 0 0 no-repeat;
+    width: 185px;
+    height: 90px;
+    top: 700px;
+    left: 100px;
 }
 #btn_cordoba{
     width: 330px;
@@ -267,13 +288,21 @@ button:hover{
     top: 750px;
     left: 535px;
 }
+
+#btn_cred{
+    top: 500px;
+    left: 240px;
+}
+#btn_deb{
+    top: 500px;
+    left: 440px;
+}
 .table{
-    position: fixed;
+    position: absolute;
     border-color: blue;
     border-top-width: 10px;
     background: white;
-    opacity: 0.7;
     width: 730px;
-    top: 170px;
+    top: 30px;
     left: 270px;
 }
