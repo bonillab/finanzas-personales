@@ -57,11 +57,11 @@ define(function (require) {
         });
         
         function historia(){
-            if(pos==5) tru_img();
+            if(pos==4) tru_img();
             
-            else if(pos == 7) mustache(1,1);
-            else if(pos == 14) cred_deb()
-            else if(pos<0){
+            else if(pos == 6) mustache(1,1);
+            else if(pos == 13) cred_deb()
+            else if(pos<0 || pos == 16){
                 mustache(0,1);
                 pos = 0;
                 console.log("prncipal");
@@ -112,6 +112,7 @@ define(function (require) {
             /*historia();*/
         });
 
+
         $('#canvas').on('click','#btn_inicio',function(){
             mustache(0,1);
             });
@@ -139,7 +140,7 @@ define(function (require) {
         });
         
         $('#canvas').on('click','.btn_atras',function(){
-            mustache(pos);
+            mustache(0,2);
         });
         
         $('#canvas').on('click','.btn_sig_h',function(){
@@ -152,6 +153,12 @@ define(function (require) {
             historia();
         });
         
+        $('#canvas').on('click','#btn_menu_atras',function(){
+            console.log("atras");
+            mustache(0,1);
+            console.log(mustache(0,1));
+        });
+       
         $('#canvas').on('click','#btn_cred', function(){
             output = Mustache.render(tpl[1].template[3].tpl, {text : tpl[1].template[3].cred});
             $('#canvas').html(output);
