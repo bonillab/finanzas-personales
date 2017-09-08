@@ -1,13 +1,13 @@
 define(function (require) {
     return [
         {
-            /*Menus*/
+            /*Menu*/
             'template':[
-                {'tpl' : '<div class="inter_size" id="int_1"><button class="button" id="btn_inicio" type="button"></button></div>'},
+                {'tpl' : '<div class="inter_size" id="int_1"><div class="flecha" style="top: 400px; left: 565px;"></div><button class="button" id="btn_inicio" type="button"></button></div>'},
         
-                {'tpl' : '<div class="inter_size" id="int_2" data="2"><button class="button" id="btn_historia"></button><button class="button" id="btn_jugar"></button></div>'},
+                {'tpl' : '<div class="inter_size" id="int_2" data="2"><div class="flecha" style="top: 250px; left: 250px;"></div><button class="button" id="btn_historia"></button><div class="flecha" style="top: 250px; left: 890px;"></div><button class="button" id="btn_jugar"></button></div>'},
         
-                {'tpl' : '<div class="inter_size" id="fondo"><h1 style = "position: absolute; top: 300px; left: 235px;">Necesidad o Deseo</h1><h1 style = "position: absolute; top: 300px; left: 840px;">El ahorro</h1><button class="boton" id="btn_nd"></button><button class="boton" id="btn_ahorro"></button><button class="boton btn_atras" id="btn_menu_atras"></button></div>'}
+                {'tpl' : '<div class="inter_size" id="fondo"><div class="flecha" style="top: 130px; left: 310px;"></div><div class="flecha" style="top: 130px; left: 860px;"></div><h1 style = "position: absolute; top: 300px; left: 235px;">Necesidad o Deseo</h1><h1 style = "position: absolute; top: 300px; left: 840px;">El ahorro</h1><button class="boton" id="btn_nd"></button><button class="boton" id="btn_ahorro"></button><button class="boton btn_atras" id="btn_menu_atras"></button></div>'}
                     
             ]
         },
@@ -20,7 +20,7 @@ define(function (require) {
                 
                 {'tpl': '<div class="inter_size" id="fondo"><div id="tru_cont"><h1 style="font-size : 50px">{{text}}</h1></div><div class="tru" id="tru1" style="left : 150px"></div><div class="tru" style="left : 500px"><picture><img src="../img/cambio.png"></picture></div><div><input type="text" id="tru_inp"><div><button class="boton" id="btn_tru">Aceptar</button><div class="tru" id="tru2" style="left : 750px"></div><button class="boton btn_atras_h"></button><button class="boton btn_sig_h"></button></div>'},
                 
-                {'tpl' : '<div class="inter_size" id="int_debcred"><h2 id="cyd_cont">{{text}}</h2><button class="boton" id="btn_cred">Crédito</button><button class="boton" id="btn_deb">Débito</button><button class="boton btn_atras_h"></button><button class="boton btn_sig_h"></button></div>', 'title' : "Tarjetas de Débito y Crédito", 'deb' : "Tarjeta de débito: vinculada directamente a la cuenta (ahorro o comprobación). Cuando se utilizael dinero se toma directamente de la cuenta.", 'cred' : "Tarjeta de crédito: es un medio de pago que le permite hacer compras que puede pagar posteriormente (una semana después, un mes después, un año después, etc). Son llamadas “de crédito” porque cuando paga cualquier mercancía con ella, el banco que se la otorgó te está concediendo un préstamo que debe pagar de acuerdo al período que elija según los plazos negociados con la entidad."}
+                {'tpl' : '<div class="inter_size" id="int_debcred"><h2 id="cyd_cont">{{text}}</h2><button class="boton" id="btn_cred">Crédito</button><button class="boton" id="btn_deb">Débito</button><button class="boton btn_atras_h"></button><button class="boton btn_sig_h"></button></div>', 'title' : "Tarjetas de Débito y Crédito", 'deb' : "Tarjeta de débito: vinculada directamente a la cuenta (ahorro o comprobación). Cuando se utiliza el dinero se toma directamente de la cuenta.", 'cred' : "Tarjeta de crédito: es un medio de pago que le permite hacer compras que puede pagar posteriormente (una semana después, un mes después, un año después, etc). Son llamadas “de crédito” porque cuando paga cualquier mercancía con ella, el banco que se la otorgó te está concediendo un préstamo que debe pagar de acuerdo al período que elija según los plazos negociados con la entidad."}
             ],
             
             'img' : [
@@ -54,12 +54,9 @@ define(function (require) {
               {'title': 'Innovaciones en el transporte Siglo XIX','hc': 'Las innovaciones en el transporte revitalizan notablemente el comercio, ya que con la mejora del transporte de mercancías, éstas pueden ser manufacturadas en cualquier lugar y ser transportadas de forma barata a todos los puntos de consumo.','img': '../img/hc/tren.png'},
               {'title': 'Globalización Siglo XX - XXI','hc': 'Creación de zonas de libre comercio a nivel internacional.','img': '../img/hc/planeta-hover.png'},
               {'title': 'Era Tecnológica/ e-commerce Siglo XXI','hc': 'Tendencia a la compra-venta de productos y servicios a través d e medios electrónicos e informáticos.','img': '../img/hc/shop.png'},
-              
-              /*Contenido del trueque*/
-              
-              
-          ],
+              ],
             
+            /*Contenido del trueque*/
             'tru_cont' : [
                 {'title' : '¿Cuántos pollos vale una vaca?', 'cont' : 'Esa es una buena suposición. Pero, ¿qué pasa si la vaca es vieja o insalubre? Esto podría cambiar el número de pollos que vale la vaca. Esta es la razón por la que el trueque terminó.', 'img1' : '../img/pollo.png', 'img2' : '../img/vaca.png'},
                 

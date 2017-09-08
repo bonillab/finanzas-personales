@@ -6,22 +6,32 @@
 .sweet-alert p{
     font-size: 30px !important;
 }
+
 .tr_indice{
     background-color: dodgerblue;
     width: 100px;
 }
+
 th{
     left: 500px;
     border-top-width: 10px;
 }
+
 h1{
     text-align: center;
+}
+
+.flecha{
+    position: absolute;
+    width: 64px;
+    height: 103px;
+    background: url("../img/flecha.png")0 0 no-repeat;
 }
 
 .tuto{
     top: 27px;
     position: absolute;
-    width: 800px;
+    width: 900px;
     left: 180px;
     background-color: white;
 }
@@ -29,6 +39,7 @@ h1{
 .sweet-alert{
     left: 600px !important; 
 }
+
 input[type=text]{
     background: white;
     border-radius: 0;
@@ -53,6 +64,7 @@ input[type=number]::-webkit-inner-spin-button {
     font-size: 18pt;
     height: 30px;
 }
+
 #tru_inp{
     width: 160px;
     border-style: solid;
@@ -63,24 +75,29 @@ input[type=number]::-webkit-inner-spin-button {
     position: absolute;
     left: 500px;
 }
+
 .select{
     font-size:30px;
     border: none;
     background-color: dodgerblue;
 }
+
 .button {
     position: absolute;
     border-radius: 0;
     outline: 0;
 }
+
 button:hover{
     border: none;
 }
+
 .boton{
     position: absolute;
     width: 130px;
     height: 50px;
 }
+
 .button:hover {
     border: none;
 }
@@ -99,6 +116,7 @@ button:hover{
     height: 845px;
     width: 1200px;
 }
+
 /*background de interfaces*/
 #fondo{
     background-image: url("../img/background.png")
@@ -110,19 +128,24 @@ button:hover{
     width: 300px;
     top: 350px; 
 }
+
 #int_1{
     background: url("../img/principal.png") 0 0 no-repeat;
 }
+
 #int_2{
     background: url("../img/background-menu.png") 0 0 no-repeat;
 }
+
 /*Interfaces de juego*/
 #menu_coin{
     background: url("../img/background.png") 0 0 no-repeat;
 }
+
 #int_nyd{
     background: url("../img/background_game.png") 0 0 no-repeat;
 }
+
 #int_ahorro{
     background: url("../img/background_game.png") 0 0 no-repeat;
 }
@@ -130,24 +153,28 @@ button:hover{
 #int_hc{
     background: url("../img/hc-background.png") 0 0 no-repeat;
 }
+
 #int_debcred{
     background: url("../img/historia/cred_deb.png") 0 0 no-repeat;
 }
+
 #tru_cont{
     position: absolute;
     width: 900px;
     left: 150px;
     top: 80px;
 }
+
 #cyd_cont{
     position: absolute;
     width: 456px;
     height: 280px;
-    top: 130px;
+    top: 110px;
     left: 172px;
     text-align: center;
     color: white;
 }
+
 /*Botones*/
 #btn_inicio{
     height: 230px;
@@ -156,9 +183,11 @@ button:hover{
     left: 500px;
     background: url("../img/btn_ini.png") 0 0 no-repeat;
 }
+
 #btn_inicio:hover{
     background: url("../img/btn_ini_hover.png") 0 0 no-repeat;
 }
+
 #btn_historia{
     height: 280px;
     width: 450px;
@@ -166,9 +195,11 @@ button:hover{
     left: 80px;
     background: url("../img/btn_historia.png") 0 0 no-repeat;
 }
+
 #btn_historia:hover{
     background: url("../img/btn_historia_hover.png") 0 0 no-repeat;
 }
+
 #btn_jugar{
     height: 350px;
     width: 310px;
@@ -176,13 +207,16 @@ button:hover{
     left: 740px;
     background: url("../img/btn_juego.png") 0 0 no-repeat;
 }
+
 #btn_jugar:hover{
     background: url("../img/btn_juego_hover.png") 0 0 no-repeat;
 }
+
 .btn_acep{
     top: 720px;
     left: 520px;
 }
+
 #btn_nd{
     background: url("../img/nyd.png") 0 0 no-repeat;
     width: 280px;
@@ -202,6 +236,7 @@ button:hover{
     top: 390px;
     left: 800px; 
 }
+
 #btn_ahorro:hover{
     background: url("../img/ahorro-hover.png") 0 0 no-repeat;
 }
@@ -211,65 +246,81 @@ button:hover{
     left: 180px;
     background: url("../img/hc/trueque.png") 0 0 no-repeat;
 }
+
 #btn_trueque:hover{
     background: url("../img/hc/trueque-hover.png") 0 0 no-repeat;
 }
+
 #btn_diamante{
     top: 185px;
     left: 548px;
     background: url("../img/hc/diamante.png") 0 0 no-repeat;
 }
+
 #btn_diamante:hover{
     background: url("../img/hc/diamante-hover.png") 0 0 no-repeat;
 }
+
 #btn_banco{
     top: 190px;
     left: 970px;
     background: url("../img/hc/banco.png") 0 0 no-repeat;
 }
+
 #btn_banco:hover{
     background: url("../img/hc/banco-hover.png") 0 0 no-repeat;
 }
+
 #btn_barco{
     top: 270px;
     left: 730px;
     background: url("../img/hc/barco.png") 0 0 no-repeat;
 }
+
 #btn_barco:hover{
     background: url("../img/hc/barco-hover.png") 0 0 no-repeat;
 }
+
 #btn_trasatlantico{
     top: 350px;
     left: 150px;
     background: url("../img/hc/trasatlantico.png") 0 0 no-repeat;
 }
+
 #btn_trasatlantico:hover{
     background: url("../img/hc/trasatlantico-hover.png") 0 0 no-repeat;
 }
+
 #btn_tren{
     top: 410px;
     left: 450px;
     background: url("../img/hc/tren.png") 0 0 no-repeat;
 }
+
 #btn_tren:hover{
     background: url("../img/hc/tren-hover.png") 0 0 no-repeat;
 }
+
 #btn_planeta{
     top: 530px;
     left: 850px;
     background: url("../img/hc/planeta.png") 0 0 no-repeat;
 }
+
 #btn_planeta:hover{
     background: url("../img/hc/planeta-hover.png") 0 0 no-repeat;
 }
+
 #btn_shop{
     top: 570px;
     left: 200px;
     background: url("../img/hc/shop.png") 0 0 no-repeat;
 }
+
 #btn_shop:hover{
     background: url("../img/hc/shop-hover.png") 0 0 no-repeat;
 }
+
 .btn_atras{
     background: url("../img/btn_atras.png") 0 0 no-repeat;
     width: 185px;
@@ -277,6 +328,7 @@ button:hover{
     top: 700px;
     left: 100px;
 }
+
 .btn_sig{
     top: 780px;
     left: 950px;
@@ -289,6 +341,7 @@ button:hover{
     top: 700px;
     left: 915px;
 }
+
 .btn_atras_h{
     background: url("../img/btn_atras.png") 0 0 no-repeat;
     width: 185px;
@@ -296,6 +349,7 @@ button:hover{
     top: 700px;
     left: 100px;
 }
+
 #btn_cordoba{
     width: 330px;
     height: 198px;
@@ -303,6 +357,7 @@ button:hover{
     left: 150px;
     top: 370px;
 }
+
 #btn_dolar{
     width: 296px;
     height: 198px;
@@ -310,6 +365,7 @@ button:hover{
     left: 750px;
     top: 370px;
 }
+
 #btn_tru{
     top: 750px;
     left: 535px;
@@ -319,15 +375,17 @@ button:hover{
     top: 500px;
     left: 240px;
 }
+
 #btn_deb{
     top: 500px;
     left: 440px;
 }
+
 .table{
     position: absolute;
     border-color: blue;
     background: white;
-    width: 570px;
+    width: 580px;
     top: 135px;
     left: 300px;
 }

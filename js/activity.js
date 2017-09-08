@@ -12,6 +12,12 @@ define(function (require) {
         else return num;
     }
     
+    function animateArrow(){
+        for(var x=0; x<=100; x++){
+            $(".flecha").animate({top: "+=50"}, 1000);
+            $(".flecha").animate({top: "-=50"}, 1000);
+           }
+    }
     function suma(valor){
         var list = new Array();
         var suma = 0;   
@@ -31,7 +37,6 @@ define(function (require) {
         var total = Math.round(val1 / val2);
         if(total == Infinity || isNaN(total)) total = "Datos no validos";
         else total = 'Puedes comprar lo que necesitas en: '+total+' semanas'; 
-        console.log(val1,val2);
         return total;
     }
     
@@ -64,20 +69,15 @@ define(function (require) {
             else if(pos<0 || pos == 16){
                 mustache(0,1);
                 pos = 0;
-                console.log("prncipal");
+                animateArrow();
             }
             else{
                 output = Mustache.render(tpl[1].template[0].tpl, {bg : tpl[1].img[pos]});
                 $('#canvas').html(output);
             }
-            
         }
         
-        function atras_juego(){
-            
-        }
-       
-        function table(coin){
+       function table(coin){
             mustache(2,1);
             for(var i=0; i<10; i++){
                 output = Mustache.render(tpl[2].template[2].tpl,{text : (i+1), coin : coin});
@@ -103,18 +103,15 @@ define(function (require) {
             $('#canvas').html(output);
         }
 
-        
         $(document).ready(function(){
             mustache(0,0);
-            /*mustache(2,0);*/
-            /*mustache(2,4);*/
-            /*tru_img();*/
-            /*historia();*/
+            animateArrow();
         });
 
 
         $('#canvas').on('click','#btn_inicio',function(){
             mustache(0,1);
+            animateArrow();
             });
         
         $('#canvas').on('click','#btn_historia',function(){
@@ -123,7 +120,8 @@ define(function (require) {
         
         
         $('#canvas').on('click','#btn_jugar',function(){
-            mustache(0,2);    
+            mustache(0,2);   
+            animateArrow();
         });
         
         $('#canvas').on('click','#btn_nd',function(){
@@ -141,6 +139,7 @@ define(function (require) {
         
         $('#canvas').on('click','.btn_atras',function(){
             mustache(0,2);
+            animateArrow();
         });
         
         $('#canvas').on('click','.btn_sig_h',function(){
@@ -151,18 +150,19 @@ define(function (require) {
         $('#canvas').on('click','.btn_atras_h',function(){
             pos-= 1;
             historia();
+            animateArrow();
         });
         
         $('#canvas').on('click','#btn_menu_atras',function(){
-            console.log("atras");
             mustache(0,1);
-            console.log(mustache(0,1));
+            animateArrow();
         });
        
         $('#canvas').on('click','#btn_cred', function(){
             output = Mustache.render(tpl[1].template[3].tpl, {text : tpl[1].template[3].cred});
             $('#canvas').html(output);
         });
+        
         
         $('#canvas').on('click','#btn_deb', function(){
             output = Mustache.render(tpl[1].template[3].tpl, {text : tpl[1].template[3].deb});
@@ -201,7 +201,6 @@ define(function (require) {
         $('#canvas').on('click','#btn_calc_nyd',function(){
             var nec = suma('nec');
             var des = suma('des');
-            console.log(nec+"  "+des);
             if(nec.suma < des.suma){
                 document.getElementById('player').play();
                 swal({  title : "¿Realmente tus deseos son más importantes que tus necesidades?",         
