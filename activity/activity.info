@@ -1,6 +1,6 @@
 [Activity]
 name = Finanzas-personales
-activity_version = 1
+activity_version = 1.0.1
 bundle_id = org.sugarlabs.MyActivity
 exec = sugar-activity-web
 icon = activity-icon

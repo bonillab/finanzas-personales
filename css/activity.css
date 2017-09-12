@@ -14,7 +14,7 @@
 
 th{
     left: 500px;
-    border-top-width: 10px;
+    border-top-width: 20px;
 }
 
 h1{
@@ -147,7 +147,7 @@ button:hover{
 }
 
 #int_ahorro{
-    background: url("../img/background_game.png") 0 0 no-repeat;
+    background: url("../img/juego_ahorro.png") 0 0 no-repeat;
 }
 
 #int_hc{
@@ -383,9 +383,10 @@ button:hover{
 
 .table{
     position: absolute;
+    opacity: 0.8;
     border-color: blue;
     background: white;
     width: 580px;
-    top: 135px;
+    top: 180px;
     left: 300px;
 }

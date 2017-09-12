@@ -207,13 +207,14 @@ define(function (require) {
                         type: "warning"  
                     });
                }
-            else if(nec === undefined || des === undefined){
+            else if(typeof(nec) === "string" || typeof(des) === "string"){
                 swal({  title : "Datos no validos",         
                         type: "success"  
                     });
             }
             else{
-                swal({  title : "Felicidades, buen trabajo",         
+                swal({  title : "¡MUY BIEN!",
+                        text : 'Estas priorizando lo que realmente necesitas.',
                         type: "success"  
                     });
             }
