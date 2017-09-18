@@ -16,7 +16,7 @@ define(function (require) {
             'template': [
                 {'tpl' : '<div class="inter_size" data="{{data}}"id="int_his" style="background : url({{bg}})"><button class="boton button btn_atras_h"></button><button class="boton button btn_sig_h"></button></div>'},
                 
-                {'tpl': '<div class="inter_size" id="int_hc"><button class="btn_hc" id="btn_trueque" data="0"></button><button class="btn_hc" id="btn_diamante" data="1"></button><button class="btn_hc" id="btn_banco" data="2"></button><button class="btn_hc" id="btn_barco" data="3"></button><button class="btn_hc" id="btn_trasatlantico" data="4"></button><button class="btn_hc" id="btn_tren" data="5"></button><button class="btn_hc" id="btn_planeta" data="6"></button><button class="btn_hc" id="btn_shop" data="7"></button><button class="boton button btn_atras_h"></button><button class="boton button btn_sig_h"></button></div>'},
+                {'tpl': '<div class="inter_size" id="int_hc"><button class="btn_hc" id="btn_trueque" data="0"><div class="flecha" style="top: -140px; left: 65px;"></button><button class="btn_hc" id="btn_diamante" data="1"></button><button class="btn_hc" id="btn_banco" data="2"></button><button class="btn_hc" id="btn_barco" data="3"></button><button class="btn_hc" id="btn_trasatlantico" data="4"></button><button class="btn_hc" id="btn_tren" data="5"></button><button class="btn_hc" id="btn_planeta" data="6"></button><button class="btn_hc" id="btn_shop" data="7"></button><button class="boton button btn_atras_h"></button><button class="boton button btn_sig_h"></button></div>'},
                 
                 {'tpl': '<div class="inter_size" id="fondo"><div id="tru_cont"><h1 style="font-size : 50px">{{text}}</h1></div><div class="tru" id="tru1" style="left : 150px"></div><div class="tru" style="left : 500px"><picture><img src="../img/cambio.png"></picture></div><div><input type="number" id="tru_inp"><div><button class="boton" id="btn_tru">Aceptar</button><div class="tru" id="tru2" style="left : 750px"></div><button class="boton button btn_atras_h"></button><button class="boton button btn_sig_h"></button></div>'},
                 
@@ -53,20 +53,20 @@ define(function (require) {
               {'title': 'Comercio Transatlántico Siglo XVII','hc': 'Las travesías mejoran con el paso del barco de vela al barco de vapor, mucho más rápido y seguro.', 'img': '../img/hc/trasatlantico.png'},
               {'title': 'Innovaciones en el transporte Siglo XIX','hc': 'Las innovaciones en el transporte revitalizan notablemente el comercio, ya que con la mejora del transporte de mercancías, éstas pueden ser manufacturadas en cualquier lugar y ser transportadas de forma barata a todos los puntos de consumo.','img': '../img/hc/tren.png'},
               {'title': 'Globalización Siglo XX - XXI','hc': 'Creación de zonas de libre comercio a nivel internacional.','img': '../img/hc/planeta-hover.png'},
-              {'title': 'Era Tecnológica/ e-commerce Siglo XXI','hc': 'Tendencia a la compra-venta de productos y servicios a través d e medios electrónicos e informáticos.','img': '../img/hc/shop.png'},
+              {'title': 'Era Tecnológica/ e-commerce Siglo XXI','hc': 'Tendencia a la compra-venta de productos y servicios a través de medios electrónicos e informáticos.','img': '../img/hc/shop.png'},
               ],
             
             /*Contenido del trueque*/
             'tru_cont' : [
                 {'title' : '¿Cuántos pollos vale una vaca?', 'cont' : 'Esa es una buena suposición. Pero, ¿qué pasa si la vaca es vieja o insalubre? Esto podría cambiar el número de pollos que vale la vaca. Esta es la razón por la que el trueque terminó.', 'img1' : '../img/pollo.png', 'img2' : '../img/vaca.png'},
                 
-                {'title' : '¿Cuántas mochilas vale una computadora?', 'cont' : 'Esa es una buena suposición. Pero, ¿qué paso si la computadora es vieja, no tiene cargador, el audio no funciona muy bien? Esto podría cambiar el número de mochilas que vale la computadora.', 'img1' : '../img/mochila.png', 'img2' : '../img/compu.png'},
+                {'title' : '¿Cuántas mochilas vale una computadora?', 'cont' : 'Esa es una buena deducción. Pero, ¿qué pasa si la computadora es vieja, no tiene cargador, el audio no funciona muy bien? esto podría cambiar el número de mochilas que vale la computadora.', 'img1' : '../img/mochila.png', 'img2' : '../img/compu.png'},
                 
-                {'title' : '¿Cuántos zapatos vale una chaqueta?', 'cont' : 'Muy buena suposición. ¿Pero qué si los zapatos son el tamaño incorrecto, o dañado? Esto podría cambiar cuántos zapatos de la chaqueta vale la pena.', 'img1' : '../img/zapato.png', 'img2' : '../img/chaqueta.png'},
+                {'title' : '¿Cuántos zapatos vale una chaqueta?', 'cont' : 'Muy buena suposición. Pero, ¿qué pasa si los zapatos son el tamaño incorrecto, o están dañados? esto podría cambiar cuántos zapatos valen la chaqueta.', 'img1' : '../img/zapato.png', 'img2' : '../img/chaqueta.png'},
                 
-                {'title' : '¿Cuántos plátanos vale un melón?', 'cont' : '¡Buen intento! ¿Y si te dijera que los plátanos no están maduros y son pequeños, esto cambiaría cuántos plátanos vale el melón?', 'img1' : '../img/banano.png', 'img2' : '../img/melon.png'},
+                {'title' : '¿Cuántos plátanos vale un melón?', 'cont' : '¡Buen intento! ¿Y si te dijera que los plátanos no están maduros y son pequeños? esto cambiaría cuántos plátanos vale el melón.', 'img1' : '../img/banano.png', 'img2' : '../img/melon.png'},
                 
-                {'title' : '¿Cuántas sillas vale una cama?', 'cont' : '¡Muy Bien! Pero, más sillas podrían ser necesaria para un comedor grande, o si las sillas no están en buenas condiciones.', 'img1' : '../img/silla.png', 'img2' : '../img/cama.png'},
+                {'title' : '¿Cuántas sillas vale una cama?', 'cont' : '¡Muy Bien! Pero, ¿qué pasa si las sillas son viejas y están en mal estado? esto cambiaría el número de sillas que vale una cama.', 'img1' : '../img/silla.png', 'img2' : '../img/cama.png'},
                 
             ]
             

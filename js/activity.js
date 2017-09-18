@@ -64,7 +64,7 @@ define(function (require) {
         function historia(){
             if(pos==4) tru_img();
             
-            else if(pos == 6) mustache(1,1);
+            else if(pos == 6) {mustache(1,1); animateArrow();}
             else if(pos == 13) cred_deb()
             else if(pos<0 || pos == 16){
                 mustache(0,1);
@@ -185,6 +185,7 @@ define(function (require) {
         });
         
         $('#canvas').on('click','.btn_hc',function(){
+            $('.flecha').css("visibility","hidden");
             var btn = $(this).attr('data');
             var title = tpl[3].content[btn].title;
             var txt = tpl[3].content[btn].hc;
