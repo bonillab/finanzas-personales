@@ -47,3 +47,6 @@ Construir el paquete `XO`. Para esto ejecute el siguiente comando en la raiz del
 	$ python setup.py dist_xo
 
 de esta manera se genera el archivo `*.xo` en la carpeta dist.
+
+## [Abrir en PC](https://github.com/bonillab/Finanzas-Personales-PC)
+
